@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app/",
+    origin:"https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app",
     credentials:true,
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders:['Content-Type','Authorization']
