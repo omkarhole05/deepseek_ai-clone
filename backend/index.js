@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
+    origin:"https://deepseek-ai-clone-chi.vercel.app",
     credentials:true,
     methods:['GET','POST','PUT','DELETE'],
     allowedHeaders:['Content-Type','Authorization']
