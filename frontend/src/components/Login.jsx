@@ -28,7 +28,7 @@ function Login() {
         const handleLogin= async ()=>{
             setError("")
             try {
-                const {data}= await axios.post("https://deepseek-backend-2qlp.onrender.com/api/v1/user/login",
+                const {data}= await axios.post("https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app/api/v1/user/login",
                     {
                     email:formData.email,
                     password:formData.password},
