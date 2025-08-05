@@ -15,14 +15,19 @@ const URL=process.env.MONGO_URL;
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({
-    origin:"https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app",
-    credentials:true,
-    methods:['GET','POST','PUT','DELETE'],
-    allowedHeaders:['Content-Type','Authorization']
-}))
+// app.use(cors({
+//     origin:"https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app",
+//     credentials:true,
+//     methods:['GET','POST','PUT','DELETE'],
+//     allowedHeaders:['Content-Type','Authorization']
+// }))
 
-
+const corsOptions = {
+    origin: "https://deepseek-ai-clone-git-main-holeom191-gmailcoms-projects.vercel.app", // remove trailing slash
+    credentials: true,
+};
+const cors = require("cors");
+app.use(cors(corsOptions));
 //DB connection
 try {
     mongoose.connect(URL)
