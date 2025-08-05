@@ -39,7 +39,7 @@ function Prompt() {
 
     try {
       const token = localStorage.getItem("token");
-      const { data } = await axios.post("http://localhost:4005/api/v1/deepseekai/prompt",
+      const { data } = await axios.post("https://deepseek-backend-2qlp.onrender.com/api/v1/deepseekai/prompt",
         { content: trimmed },
         { headers: { Authorization: `Bearer ${token}` }, withCredentials: true }
       );

@@ -27,7 +27,7 @@ function Signup() {
         const handleSignup= async ()=>{
             setError("")
             try {
-                const {data}= await axios.post("http://localhost:4005/api/v1/user/signup",
+                const {data}= await axios.post("https://deepseek-backend-2qlp.onrender.com/api/v1/user/signup",
                     {userName:formData.userName,
                     email:formData.email,
                     password:formData.password},
