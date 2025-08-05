@@ -6,7 +6,7 @@ import promptRoute from './routes/prompt.route.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
-dotenv.config()
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 const URL=process.env.MONGO_URL;
